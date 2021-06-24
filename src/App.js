@@ -1,15 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import Calculator from './components/BoilingVerdict';
-import TemperatureInput from './components/TemperatureInput';
-
+import './styles/splitPane.css';
+//import Calculator from './components/BoilingVerdict';
+import TemperatureInput, {Calculator} from './components/TemperatureInput';
+import WelcomeDialog, {Spliter, SignUpDialog} from './components/Composition';
 
 function App() {
   return (
     <div className="App">
+      
+      {/*<TemperatureInput scale="f" />
+      <TemperatureInput scale="c" />*/}
       <Calculator />
-      <TemperatureInput scale="f" />
-      <TemperatureInput scale="c" />
+      <p>Composition vs Inheritance</p>
+      <WelcomeDialog />
+      <Spliter />
+      <SignUpDialog />
     </div>
   );
 }
